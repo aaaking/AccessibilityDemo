@@ -59,7 +59,7 @@ fun searchPacket(rootInActiveWindow: AccessibilityNodeInfo?) {
 
 fun openPacket(rootInActiveWindow: AccessibilityNodeInfo?) {
     Log.i(TAG, "openPacket node: ${rootInActiveWindow} childCount: ${rootInActiveWindow?.childCount}   idName: ${rootInActiveWindow?.getViewIdResourceName()}")
-    if (rootInActiveWindow?.isClickable == true && rootInActiveWindow?.className?.contains("ImageView") == true) {
+    if (rootInActiveWindow?.isClickable == true && rootInActiveWindow?.className?.contains("android.widget.Button") == true) {
         rootInActiveWindow?.performAction(AccessibilityNodeInfo.ACTION_CLICK)
     }
 //        node?.traversalAfter
