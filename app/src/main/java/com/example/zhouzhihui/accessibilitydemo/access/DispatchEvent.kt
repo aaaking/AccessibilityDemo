@@ -29,4 +29,6 @@ fun dispatchEvent(event: AccessibilityEvent?, rootInActiveWindow: AccessibilityN
     if (event?.getContentChangeTypes() == AccessibilityEvent.CONTENT_CHANGE_TYPE_TEXT) {
         Withdraw().withDraw(event, rootInActiveWindow)//防消息撤回
     }
+
+    rootInActiveWindow?.recycle()//
 }
