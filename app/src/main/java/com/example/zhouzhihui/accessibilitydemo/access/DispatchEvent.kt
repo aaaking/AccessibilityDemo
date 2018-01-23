@@ -30,5 +30,5 @@ fun dispatchEvent(event: AccessibilityEvent?, rootInActiveWindow: AccessibilityN
         Withdraw().withDraw(event, rootInActiveWindow)//防消息撤回
     }
 
-    rootInActiveWindow?.recycle()//
+    rootInActiveWindow?.recycle()//避免重复创建实例通过recycle方法回收掉nodeInfo（我们自己手动去回收）
 }
