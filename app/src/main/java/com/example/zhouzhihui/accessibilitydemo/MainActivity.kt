@@ -11,7 +11,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        hello.also {
+    }
+
+    override fun onResume() {
+        super.onResume()
+        hello?.also {
             val isOn = isAccessibilityServiceOn()
             it.text = if (isOn) "服务已经开启" else "点击开启服务"
             it.isEnabled = !isOn
